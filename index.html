@@ -8,48 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
-        /* Product images */
-        .img-ratio {
-            aspect-ratio: 16 / 10;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            display: block;
-        }
-        /* Footer */
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .social-links a, .contact-info a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 24px;
-        }
-        .social-links a:hover, .contact-info a:hover {
-            color: #ccc;
-        }
-        .contact-info {
-            margin-top: 15px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-        .contact-info a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        /* Mobile menu toggle */
-        #mobile-menu {
-            display: none;
-        }
-        .menu-toggle:checked ~ #mobile-menu {
-            display: flex;
-        }
+    /* Product images */
+    .img-ratio {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    /* Mobile menu toggle */
+    #mobile-menu {
+        display: none;
+    }
+    
+    /* Using a direct class selector for better clarity */
+    .menu-toggle-checkbox:checked ~ #mobile-menu {
+        display: flex;
+    }
+    
+    /* Custom styles for footer links, if needed, but Tailwind is doing a good job */
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 leading-relaxed">
@@ -73,7 +49,7 @@
 
             <div class="md:hidden">
                 <label for="menu-toggle" class="cursor-pointer">
-                    <input type="checkbox" id="menu-toggle" class="hidden menu-toggle" />
+                    <input type="checkbox" id="menu-toggle" class="hidden menu-toggle-checkbox" />
                     <i class="fas fa-bars text-xl"></i>
                 </label>
             </div>
@@ -93,13 +69,12 @@
             <h2 class="text-3xl font-extrabold">Drinking Water Systems for Every Need</h2>
             <p class="text-gray-600 mt-2">Domestic, commercial and industrial water purification plants from Amrut, reliable, low maintenance and designed for all conditions.</p>
         </section>
-
+        
         <section id="domestic" class="mb-12">
             <div class="flex flex-col sm:flex-row items-center sm:justify-between mb-6">
                 <h3 class="text-2xl font-bold">Domestic Solutions</h3>
                 <p class="text-sm text-gray-500 mt-2 sm:mt-0">Ideal for homes, apartments and light commercial kitchens.</p>
             </div>
-
             <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
@@ -128,15 +103,11 @@
                             <span>Application: apartments, single-family homes</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                  
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
-                    <img src="uf uv.jpg" alt="UV and UF combo" class="img-ratio rounded-lg mb-4" />
+                    <img src="uf +UV.jpg" alt="UV and UF combo" class="img-ratio rounded-lg mb-4" />
                     <h4 class="text-xl font-bold text-gray-800 mb-2">UV + UF Combo</h4>
                     <p class="text-gray-600 text-sm flex-grow mb-4">UF filtration followed by UV disinfection for an extra layer of safety.</p>
                     <ul class="text-sm space-y-2 text-gray-700 mb-6">
@@ -153,11 +124,7 @@
                             <span>Elegant wall mount design, 6W UV sterilizer</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                            
-                        </a>
-                    </div>
+                  
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
@@ -177,24 +144,19 @@
                             <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
                             <span>Suitable for water from all sources</span>
                         </li>
-                    </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                   
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
-                    <img src="wall mount ro.jpg" alt="Wall-mount RO" class="w-full img-ratio rounded-lg mb-4 object-cover" />
-                    <h4 class="text-xl font-bold text-gray-800 mb-2">Wall-mount RO</h4>
+                    <img src="uf uv.jpg" alt="Wall-mount RO" class="w-full img-ratio rounded-lg mb-4 object-cover" />
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Wall-mount </h4>
                     <p class="text-gray-600 text-sm flex-grow mb-4">
-                        Space-saving wall-mount RO units for kitchens, offices and food outlets.
+                        Space-saving wall-mount  units for kitchens, offices and food outlets.
                     </p>
                     <ul class="text-sm space-y-2 text-gray-700 mb-6">
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
-                            <span>Five stage purification stgaes, PP/UF -> Pre Carbon -> GAC -> RO -> Mineral Cartridge</span>
+                            <span>Five stage purification stgaes</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
@@ -205,11 +167,7 @@
                             <span>80 GPD membrane and 100 GPD high capacity pump</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                   
                 </article>
             </div>
         </section>
@@ -231,15 +189,11 @@
                             <span>Capacity: ~23 L/day</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                   
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
-                    <img src="https://via.placeholder.com/800x500/28A745/FFFFFF?Text=50L+RO" alt="50 Litre RO" class="img-ratio rounded-lg mb-4" />
+                    <img src="50 LITRE.jpg" alt="50 Litre RO" class="img-ratio rounded-lg mb-4" />
                     <h4 class="text-xl font-bold text-gray-800 mb-2">50 Litre RO</h4>
                     <p class="text-gray-600 text-sm flex-grow mb-4">Mid-size RO for cafeterias and clinics.</p>
                     <ul class="text-sm space-y-2 text-gray-700 mb-6">
@@ -256,15 +210,11 @@
                             <span>Optional booster pump</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                            
-                        </a>
-                    </div>
+                   
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
-                    <img src="https://via.placeholder.com/800x500/DC3545/FFFFFF?Text=100L+RO" alt="100 Litre RO" class="img-ratio rounded-lg mb-4" />
+                    <img src="100.jpg" alt="100 Litre RO" class="img-ratio rounded-lg mb-4" />
                     <h4 class="text-xl font-bold text-gray-800 mb-2">100 Litre RO</h4>
                     <p class="text-gray-600 text-sm flex-grow mb-4">High-capacity RO for kitchens, hostels and industries.</p>
                     <ul class="text-sm space-y-2 text-gray-700 mb-6">
@@ -281,11 +231,7 @@
                             <span>Optional stainless tank</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                  
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
@@ -306,11 +252,7 @@
                             <span>Local support</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                            
-                        </a>
-                    </div>
+                   
                 </article>
 
             </div>
@@ -341,11 +283,7 @@
                             <span>Used in Food & Beverages, Textiles, Pharmaceuticals, Power Plants, and Cement industries.</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                   
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
@@ -366,11 +304,7 @@
                             <span>High output rate, advanced monitoring, and sturdy frames.</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                            
-                        </a>
-                    </div>
+                   
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 flex flex-col h-full">
@@ -391,11 +325,7 @@
                             <span>Exported to numerous countries, including Kenya, Ethiopia, and Uganda.</span>
                         </li>
                     </ul>
-                    <div class="mt-auto text-right">
-                        <a href="#" class="inline-block">
-                           
-                        </a>
-                    </div>
+                    
                 </article>
 
             </div>
@@ -417,7 +347,7 @@
                     </a>
                 </p>
                 <p class="text-lg">
-                    <a href="http://www.amrutfiltration.com" class="hover:underline">
+                    <a href="http://www.amrutfiltration.com" class="hover:underline" target="_blank" rel="noopener">
                         <i class="fas fa-globe mr-2"></i>VISIT US
                     </a>
                 </p>
@@ -442,6 +372,5 @@
             <p class="text-gray-400 text-sm">© Amrut Filtration </p>
         </div>
     </footer>
-
 </body>
 </html>
